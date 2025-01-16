@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+}
+table{
+    border-collapse: collapse;
+}
+h1{
+    text-align: center;
+}
+.C1{
+    width: 100px;
+}
+.C2{
+    width: 300px;
+}
+.C3{
+    width: 500px;
+}
+.title{
+    background-color: #FF00FF20;
+}
+.normal{
+    background-color: #00FFFF25;
+}
+.supplement1{
+    display: none;
+}
+#select1:hover ~ .supplement1{
+    display: table-row;
+}
+.supplement2{
+    display: none;
+}
+#select2:hover ~ .supplement2{
+    display: table-row;
+}
+.supplement3{
+    display: none;
+}
+#select3:hover ~ .supplement3{
+    display: table-row;
+}
+.supplement4{
+    display: none;
+}
+#select4:hover ~ .supplement4{
+    display: table-row;
+}

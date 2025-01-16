@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>cmd コマンド一覧</title>
+        <meta name="description" content="コマンドプロンプトのコマンド一覧">
+        <link rel="stylesheet" href="design.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="https://gakuen.idolmaster-official.jp/">学園アイドルマスター</a></li>
+                    <li><a href="https://nikkei225jp.com/nasdaq/">株価指数</a></li>
+                    <li><a href="https://jp.investing.com/economic-calendar/">経済指標</a></li>
+                </ul>
+            </nav>
+            <div id="button_sidebar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="makedarker"></div>
+        </div>
+        <main>
+            <h1>コマンドプロンプト コマンド一覧</h1>
+            <p>※ディレクトリ名=DN,ファイル名=FN</p>
+            <table border="1">
+                <tr class="title"><th class="C1">コマンド</th><th class="C2">入力例</th><th class="C3">効果</th></tr>
+                <tr class="normal"><td>exit</td><td>exit</td><td>コマンドプロンプトの終了</td></tr>
+                <tr id="select1" class="normal"><td>cd</td><td>cd [DN]</td><td>カレントディレクトリの移動</td></tr>
+                <tr class="supplement1"><td></td><td>cd..</td><td>親ディレクトリへ移動</td></tr>
+                <tr class="supplement1"><td></td><td>cd/</td><td>ルートディレクトリへ移動</td></tr>
+                <tr id="select2" class="normal"><td>dir</td><td>dir</td><td>現在のディレクトリ・ファイルを表示</td></tr>
+                <tr class="supplement2"><td></td><td>dir/s</td><td>ディレクトリ内のサブディレクトリを含め全て表示</td></tr>
+                <tr class="supplement2"><td></td><td>dir/a</td><td>ディレクトリ内の隠しファイルとシステムファイルを含め表示</td></tr>
+                <tr class="normal"><td>md</td><td>md [DN]</td><td>ディレクトリを作成</td></tr>
+                <tr id="select3" class="normal"><td>rd</td><td>rd [DN]</td><td>ディレクトリを削除</td></tr>
+                <tr class="supplement3"><td></td><td>rd/s</td><td>ディレクトリ内のディレクトリとファイルを含め全て削除</td></tr>
+                <tr class="normal"><td>echo</td><td>echo.>[FN]</td><td>ファイルを作成</td></tr>
+                <tr id="select4" class="normal"><td>del</td><td>del [FN]</td><td>ファイルを削除</td></tr>
+                <tr class="supplement4"><td></td><td>del/p</td><td>ファイルの削除前に確認を表示</td></tr>
+                <tr class="normal"><td>copy</td><td>copy [複製元FN] [FN]</td><td>ファイルを複製</td></tr>
+                <tr class="normal"><td>ren</td><td>ren [変更前DN/FN] [DN/FN]</td><td>ディレクトリ・ファイルの名前を変更</td></tr>
+                <tr class="normal"><td>move</td><td>move [DN/FN] [移動先DN]</td><td>ディレクトリ・ファイルの移動</td></tr>
+            </table>
+        </main>
+        <script src="design.js"></script>
+    </body>
+</html>

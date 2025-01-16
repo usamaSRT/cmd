@@ -1,0 +1,95 @@
+/*sidebar*/
+nav{
+    display: block;                                      /*要素をブロック化*/
+    position: fixed;                                     /*要素の位置を固定*/
+    width: 300px;                                        /*横幅を設定*/
+    top: 0;                                              /*上端を基準に配置*/
+    left: -300px;                                        /*左端を基準に配置*/
+    bottom: 0;                                           /*下端を基準に配置*/
+    background-color: #FFCC00;                         /*背景色を設定*/
+    opacity: 0;                                          /*透明度を設定*/
+    transition: all 0.5s;                                /*要素にアニメーションを設定*/
+}
+.open nav{
+    left: 0px;                                           /*左端を基準に配置*/
+    opacity: 1;                                          /*透明度を設定*/
+    z-index: 3;                                          /*要素の前後を設定*/
+}
+/*sidebar_design*/
+nav ul{
+    list-style: none;                                    /*箇条書きのスタイルを削除*/
+    margin: 0;                                           /*外側の余白を削除*/
+    padding: 0;                                          /*内側の余白を削除*/
+}
+nav ul li{
+    border-bottom: 1px solid #000000;                  /*下線を設定*/
+}
+nav ul li a{
+    display: block;                                      /*要素をブロック化*/
+    text-decoration: none;                               /*リンクの下線を削除*/
+    font-size: 20px;                                     /*文字の大きさを設定*/
+    padding: 20px;                                       /*内側の余白を設定*/
+    color: #FFFFFF;                                    /*文字の色を設定*/
+    font-weight: 600;                                    /*文字の太さを設定*/
+}
+nav ul li a:hover{
+    background-color: #FFFFFF;                         /*背景色を設定*/
+    color: #000000;                                    /*文字の色を設定*/
+}
+/*button*/
+#button_sidebar{
+    display: block;                                      /*要素をブロック化*/
+    position: fixed;                                     /*要素の位置を固定*/
+    width: 30px;                                         /*横幅を設定*/
+    height: 30px;                                        /*高さを設定*/
+    top: 30px;                                           /*上端を基準に配置*/
+    right: 30px;                                         /*右端を基準に配置*/
+    cursor: pointer;                                     /*マウスポインターの設定*/
+    z-index: 3;                                          /*要素の前後を設定*/
+}
+#button_sidebar span{
+    display: block;                                      /*要素をブロック化*/
+    position: absolute;                                  /*親要素を基準に配置*/
+    width: 30px;                                         /*横幅を設定*/
+    height: 2px;                                         /*高さを設定*/
+    background-color: #000000;                         /*背景色を設定*/
+    transition: all 0.5s;                                /*要素にアニメーションを設定*/
+}
+#button_sidebar span:nth-child(1){
+    top: 4px;                                            /*上端を基準に配置*/
+}
+#button_sidebar span:nth-child(2){
+    top: 14px;                                           /*上端を基準に配置*/
+}
+#button_sidebar span:nth-child(3){
+    top: 24px;                                           /*上端を基準に配置*/
+}
+.open #button_sidebar span{
+    background-color: #FFFFFF;                         /*背景色を設定*/
+}
+.open #button_sidebar span:nth-child(1){
+    transform:translateY(10px) rotate(-315deg);          /*要素を位置と回転を設定*/
+}
+.open #button_sidebar span:nth-child(2){
+    opacity: 0;                                          /*透明度を設定*/
+}
+.open #button_sidebar span:nth-child(3){
+    transform:translateY(-10px) rotate(315deg);          /*要素を位置と回転を設定*/
+}
+/*make darker*/
+#makedarker{
+    display: none;                                       /*要素を非表示化*/
+    transition: all 0.5s;                                /*要素にアニメーションを設定*/
+}
+.open #makedarker{
+    display: block;                                      /*要素をブロック化*/
+    position: fixed;                                     /*要素の位置を固定*/
+    width: 100%;                                         /*横幅を設定*/
+    height: 100%;                                        /*高さを設定*/
+    top: 0;                                              /*上端を基準に配置*/
+    left: 0;                                             /*左端を基準に配置*/
+    opacity: 0.8;                                        /*透明度を設定*/
+    z-index: 2;                                          /*要素の前後を設定*/
+    background-color: #000000;                         /*背景色を設定*/
+    cursor: pointer;                                     /*マウスポインターの設定*/
+}
